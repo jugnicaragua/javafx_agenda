@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<fx:root id="AnchorPane" prefHeight="400.0" prefWidth="600.0" type="AnchorPane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <BorderPane layoutX="52.0" layoutY="26.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <Pane prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="id_img_dep" fitHeight="150.0" fitWidth="200.0" layoutX="39.0" layoutY="108.0" onMouseClicked="#admin_deps" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/locationicon.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label layoutX="68.0" layoutY="250.0" prefHeight="17.0" prefWidth="93.0" style="-fx-alignment: center;" text="Departamentos" />
+                  <Label layoutX="214.0" layoutY="264.0" prefHeight="23.0" prefWidth="152.0" style="-fx-alignment: center;" text="Personas" />
+                  <ImageView fx:id="id_img_pers" fitHeight="150.0" fitWidth="200.0" layoutX="215.0" layoutY="125.0" onMouseClicked="#admin_pers" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/peopleicon.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="id_img_emps" fitHeight="136.0" fitWidth="152.0" layoutX="391.0" layoutY="116.0" onMouseClicked="#admin_emps" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/companiesicon.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label layoutX="393.0" layoutY="256.0" prefHeight="17.0" prefWidth="149.0" style="-fx-alignment: center;" text="Empresas" />
+                  <Label layoutX="135.0" layoutY="27.0" text="Agenda de Negocios">
+                     <font>
+                        <Font name="System Bold" size="34.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</fx:root>

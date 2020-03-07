@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root id="AnchorPane" prefHeight="400.0" prefWidth="600.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="idVovler" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#volver" text="Vovler">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="136.0" layoutY="27.0" text="Administrar Departamentos">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Pane layoutX="53.0" layoutY="63.0" prefHeight="130.0" prefWidth="496.0" style="-fx-border-color: gray;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label fx:id="lbl_descripcion" layoutX="26.0" layoutY="48.0" text="Descripción:" />
+            <TextField fx:id="txt_descripcion" layoutX="99.0" layoutY="44.0" prefHeight="25.0" prefWidth="276.0" />
+            <Button fx:id="btn_guardar" layoutX="408.0" layoutY="14.0" mnemonicParsing="false" onAction="#guardar" prefHeight="25.0" prefWidth="65.0" text="Guardar" />
+            <Button fx:id="btn_borrar" layoutX="408.0" layoutY="52.0" mnemonicParsing="false" onAction="#borrar" prefHeight="25.0" prefWidth="65.0" text="Borrar" />
+            <Button fx:id="btn_cancelar" layoutX="408.0" layoutY="91.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="25.0" prefWidth="65.0" text="Cancelar" />
+            <Label fx:id="lbl_mensaje" layoutX="28.0" layoutY="95.0" prefHeight="17.0" prefWidth="370.0" textFill="#f80303" />
+            <Label fx:id="lbl_id" layoutX="220.0" layoutY="18.0" visible="false" />
+         </children>
+      </Pane>
+      <TableView fx:id="gv_deps" layoutX="53.0" layoutY="201.0" prefHeight="166.0" prefWidth="496.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="col_descripcion" prefWidth="405.0" text="Descripcion" />
+        </columns>
+      </TableView>
+   </children>
+</fx:root>

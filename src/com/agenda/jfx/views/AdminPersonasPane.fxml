@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root id="AnchorPane" prefHeight="400.0" prefWidth="600.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="idVolver" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#volver" text="Volver">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="103.0" layoutY="27.0" text="Administrar Contactos (Personas)">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Pane layoutX="53.0" layoutY="63.0" prefHeight="192.0" prefWidth="502.0" style="-fx-border-color: gray;">
+         <children>
+            <Button fx:id="btn_guardar" layoutX="430.0" layoutY="10.0" mnemonicParsing="false" onAction="#guardar" prefHeight="25.0" prefWidth="65.0" text="Guardar" />
+            <Button fx:id="btn_borrar" layoutX="430.0" layoutY="50.0" mnemonicParsing="false" onAction="#borrar" prefHeight="25.0" prefWidth="65.0" text="Borrar" />
+            <Button fx:id="btn_cancelar" layoutX="430.0" layoutY="90.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="25.0" prefWidth="65.0" text="Cancelar" />
+            <Label layoutX="7.0" layoutY="5.0" text="Nombres:" />
+            <TextField fx:id="txt_nombres" layoutX="63.0" layoutY="10.0" />
+            <Label layoutX="216.0" layoutY="5.0" text="Apellidos:" />
+            <TextField fx:id="txt_apellidos" layoutX="273.0" layoutY="10.0" />
+            <Label layoutX="7.0" layoutY="45.0" prefHeight="17.0" prefWidth="50.0" text="Cédula:" />
+            <TextField fx:id="txt_cedula" layoutX="63.0" layoutY="50.0" />
+            <Label layoutX="216.0" layoutY="45.0" text="Ubicación:" />
+            <ComboBox fx:id="cbx_departamentos" layoutX="273.0" layoutY="50.0" prefWidth="150.0" />
+            <Label layoutX="7.0" layoutY="85.0" text="Teléfono:" />
+            <TextField fx:id="txt_telefono" layoutX="63.0" layoutY="90.0" prefHeight="25.0" prefWidth="105.0" />
+            <Label layoutX="178.0" layoutY="85.0" text="Email:" />
+            <TextField fx:id="txt_email" layoutX="212.0" layoutY="90.0" prefHeight="25.0" prefWidth="210.0" />
+            <Label layoutX="7.0" layoutY="125.0" text="Dirección:" />
+            <TextField fx:id="txt_direccion" layoutX="63.0" layoutY="130.0" prefHeight="25.0" prefWidth="358.0" />
+            <Label fx:id="lbl_id" layoutX="453.0" layoutY="135.0" visible="false" />
+            <Label fx:id="lbl_mensaje" layoutX="64.0" layoutY="164.0" prefHeight="17.0" prefWidth="358.0" textFill="#ff0202" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <TableView fx:id="gv_personas" layoutX="53.0" layoutY="262.0" prefHeight="125.0" prefWidth="502.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="col_nombres" prefWidth="105.0" text="Nombres" />
+            <TableColumn fx:id="col_apellidos" prefWidth="105.0" text="Apellidos" />
+            <TableColumn fx:id="col_cedula" prefWidth="115.0" text="Cédula" />
+            <TableColumn fx:id="col_departamento" prefWidth="105.0" text="Ubicación" />
+        </columns>
+      </TableView>
+   </children>
+</fx:root>
